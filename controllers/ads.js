@@ -7,7 +7,7 @@ const getSingleAd = async (req, res) => {
 };
 
 const createAd = async (req, res) => {
-  res.send('Create ads');
+  res.json(req.user);
 };
 
 const updateAd = async (req, res) => {
