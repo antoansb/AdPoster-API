@@ -1,7 +1,6 @@
 const Ad = require('../models/Ad');
 const { StatusCodes } = require('http-status-codes');
 const { BadRequestError, NotFoundError } = require('../errors/errors');
-const { use } = require('express/lib/router');
 
 const getAllAds = async (req, res) => {
   const ads = await Ad.find({ createdBy: req.user.userId }).sort('createdAt');
