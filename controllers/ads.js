@@ -38,8 +38,8 @@ const updateAd = async (req, res) => {
     params: { id: adId },
   } = req;
 
-  if (title === '' || description === '') {
-    throw new BadRequestError('Title or Description cannot be empty');
+  if (title === '' || description === '' || image === '') {
+    throw new BadRequestError('Title, Description or Image cannot be empty');
   }
 
   const ad = await Ad.findByIdAndUpdate(

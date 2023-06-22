@@ -12,6 +12,10 @@ const AdSchema = new mongoose.Schema(
       required: [true, 'Please enter Ad description'],
       maxLength: 100,
     },
+    file: {
+      type: String,
+      required: true,
+    },
     createdBy: {
       type: mongoose.Types.ObjectId,
       ref: 'User',
